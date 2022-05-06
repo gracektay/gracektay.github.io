@@ -1,0 +1,52 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+* {
+  border: 1px solid red
+}
+
+#hero-grid {
+  display: grid;
+  min-height: 500px;
+  height: 50vh;
+  margin: 0px 5%;
+  grid-auto-rows: 7fr 6fr;
+  grid-auto-columns: 3fr 1fr;
+  grid-template-areas:
+      "compass-home compass-search"
+      "compass-home compass-food";
+  text-align: center;
+}
+#hero-grid .compass-food,.compass-home,.compass-search {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat
+}
+#hero-grid .compass-home {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat
+}
+
+.compass-home {
+  grid-area: compass-home;
+  position: relative;
+  background-image: url(../images/compass-home.png);
+}
+.compass-home > h2 {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  background-color: teal;
+  color: white;
+  padding: 1em;
+  font-weight: 500;
+}
+.compass-search {
+  grid-area: compass-search;
+  background-image: url(../images/compass-search.png)
+}
+.compass-food {
+  grid-area: compass-food;
+  background-image: url(../images/compass-food.png)
+}
